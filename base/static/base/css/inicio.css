@@ -1,0 +1,22 @@
+.row {
+    padding: 10px;
+    margin: 5px;
+
+}
+
+.col {
+    padding: 10px;
+    margin: 5px;
+}
+
+.row img {
+    margin: 10px;
+}
+
+.col H2 {
+    top: 80px;
+}
+
+h6 {
+    text-align: center;
+}

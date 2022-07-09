@@ -1,0 +1,21 @@
+body {
+    background: url(../weblarain/img/container-terminal-wharf-transport.jpg);
+    background-repeat: no-repeat center;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.modal-content {
+    background-color: white;
+    padding: 20px 20px 20px;
+    border: none;
+    opacity: 98%;
+    width: 500px;
+    text-align: left;
+}
+
+.required:after {
+    content: "*";
+    color: red;
+}

@@ -1,0 +1,67 @@
+{% extends "base/base.html"%} {% load static %}
+{% block style %}
+<link rel="stylesheet" href="{% static 'login/css/login.css'%}">
+{% endblock %}
+{% block content%}
+<section class="h-100 gradient-form" style="background-color: #eee;">
+  <div class="container py-5 h-100">
+    <div class="row d-flex justify-content-center align-items-center h-100">
+      <div class="col-xl-10">
+        <div class="card rounded-3 text-black">
+          <div class="row g-0">
+            <div class="col-lg-6">
+              <div class="card-body p-md-5 mx-md-4">
+
+                <div class="text-center">
+                  <img src="{% static 'login/img/logo.png' %}"
+                    style="width: 185px;" alt="logo">
+                  <h4 class="mt-1 mb-5 pb-1">
+                </div>
+
+                <form class='form' method='POST'>
+                    {% csrf_token %}
+                  <p>Por favor ingresa a tu cuenta</p>
+
+                  <div class="form-outline mb-4">
+                    <label class="form-label" >Usuario</label>
+                    <input type="email" name='username' class="form-control"
+                      placeholder="Ingresa tu email ..." />
+
+                  </div>
+
+                  <div class="form-outline mb-4">
+                                        <label class="form-label">Contraseña</label>
+                    <input type="password" name="password" class="form-control" placeholder='Ingresa tu contraseña ...' />
+
+                  </div>
+
+                  <div class="text-center pt-1 mb-5 pb-1">
+                    <button class="btn btn-primary btn-block fa-lg gradient-custom-2 mb-3" type="submit">Entrar</button>
+
+                  </div>
+
+                  <div class="d-flex align-items-center justify-content-center pb-4">
+                    <p class="mb-0 me-2">¿No tienes cuenta?</p>
+                    <button type="button"class="btn btn-outline-danger"><a class=" btn-outline-danger" href="{% url 'registro' %}">Registrate</a></button>
+                  </div>
+
+                </form>
+
+              </div>
+            </div>
+            <div class="col-lg-6 d-flex align-items-center gradient-custom-2">
+              <div class="text-white px-3 py-4 p-md-5 mx-md-4 text-center">
+                 <img src="{% static 'login/img/tito.jpg' %}"
+                    style="width: 240px;" alt="tito">
+                <h4 class="mb-4">Bienvenidos a Importadora Larraín</h4>
+                <p class="small mb-0">Dori me Interimo ayapare, dorime Ameno, ameno Latire, latiremo Dori me Ameno Omenare imperavi ameno Dimere, dimere matiro Matiremo, ameno Omenare imperavi emunari Ameno Omenare imperavi emunari Ameno Ameno dore Ameno dori me Ameno dori me Ameno dom Dori me reo Ameno dori me Ameno dori me Dori me am Ameno Ameno Ameno Omenare imperavi ameno Dimere dimere martiro Martiremo, ameno Omenare imperavi emunari Ameno Omenare imperavi emunari Ameno Ameno dore Ameno dori me Ameno dori me Ameno dom Dori me reo Ameno dori me Ameno dori me Dori me am Ameno, ameno Ameno dori me Ameno dori me Dori me, dori me, dori me... Ameno Ameno dore Ameno dori me Ameno dori me Ameno dom Dori me reo Ameno dori me Ameno dori me Ameno, ameno Ameno Ameno dori me Ameno Ameno dori me Ameno dom Dori me reo, ameno Ameno dori me Ameno, ameno dori me
+</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}

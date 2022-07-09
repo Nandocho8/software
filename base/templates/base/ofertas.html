@@ -1,0 +1,115 @@
+{% extends "base/base.html"%} {% load static %}
+{% block style %}
+<link rel="stylesheet" href="{% static 'base/css/ofertas.css'%}">
+{% endblock %}
+
+{% block content%}
+
+<div class="container">
+    <!--contenido 1-->
+    <div class="col"> <h2 style="color: red; text-align: center; font-size: 40px;">OFERTAS DISPONIBLES</h2> </div>
+    <!--ofertas 1-->
+    <div class="row">
+    <!--bamboo-->
+    <div class="col-md" style="background-color:white">
+        <div class="card text-center" style="width: 18rem;">
+        <div class="card-body">
+            <img src="{% static 'base/img/bamboo.png' %}" class="card-img-top" alt="...">
+            <h5 class="card-title">Pendrive Bamboo</h5>
+            <p class="card-text" style="text-align:center; color:red; font-size: 20px; font-weight:bold;">$2.990</p>
+            <a href="#" class="btn btn-primary">Comprar</a>
+        </div>
+        </div> 
+    </div>
+    <!--mug-->
+    <div class="col-md" style="background-color:white;">
+        <div class="card text-center" style="width: 18rem;">
+        <div class="card-body">
+            <img src="{% static 'base/img/mug.png' %}" class="card-img-top " alt="...">
+            <h5 class="card-title">Calentador de taza USB</h5>
+            <p class="card-text" style="text-align:center; color:red; font-size: 20px; font-weight:bold;">$1.990</p>
+            <a href="#" class="btn btn-primary">Comprar</a>
+        </div>
+        </div> 
+    </div>
+
+    <!--audifono-->
+    <div class="col-md" style="background-color:white;">
+        <div class="card text-center" style="width: 18rem;">
+        <div class="card-body">
+            <img src="{% static 'base/img/audifono.png' %}" class="card-img-top " alt="...">
+            <h5 class="card-title">Audifono bluetooth</h5>
+            <p class="card-text" style="text-align:center; color:red; font-size: 20px; font-weight:bold;">$3.990</p>
+            <a href="#" class="btn btn-primary">Comprar</a>
+        </div>
+        </div> 
+    </div>
+
+    <!--teclado-->
+    <div class="col-md" style="background-color:white;">
+        <div class="card text-center" style="width: 18rem;">
+        <div class="card-body">
+            <img src="{% static 'base/img/teclado.png' %}" class="card-img-top " alt="...">
+            <h5 class="card-title">Teclado bluetooth</h5>
+            <p class="card-text" style="text-align:center; color:red; font-size: 20px; font-weight:bold;">$5.990</p>
+            <a href="#" class="btn btn-primary">Comprar</a>
+        </div>
+        </div> 
+    </div>
+
+    <!--xiaomi-->
+    <div class="col-md" style="background-color:white;">
+        <div class="card text-center" style="width: 18rem;">
+        <div class="card-body">
+            <img src="{% static 'base/img/xiaomi.png' %}" class="card-img-top " alt="...">
+            <h5 class="card-title">Celular Xiaomi Redmi Note 128gb</h5>
+            <p class="card-text" style="text-align:center; color:red; font-size: 20px; font-weight:bold;">$49.990</p>
+            <a href="#" class="btn btn-primary">Comprar</a>
+        </div>
+        </div> 
+    </div>
+
+    <!--mouse-->
+    <div class="col-md" style="background-color:white;">
+        <div class="card text-center" style="width: 18rem;">
+        <div class="card-body">
+            <img src="{% static 'base/img/mouse.png' %}" class="card-img-top " alt="...">
+            <h5 class="card-title">Mouse gamer</h5>
+            <p class="card-text" style="text-align:center; color:red; font-size: 20px; font-weight:bold;">$3.990</p>
+            <a href="#" class="btn btn-primary">Comprar</a>
+        </div>
+        </div> 
+    </div>
+    <!--luces-->
+    <div class="col-md" style="background-color:white;">
+        <div class="card text-center" style="width: 18rem;">
+        <div class="card-body">
+            <img src="{% static 'base/img/luces.png' %}" class="card-img-top " alt="...">
+            <h5 class="card-title">Luces Led</h5>
+            <p class="card-text" style="text-align:center; color:red; font-size: 20px; font-weight:bold;">$4.990</p>
+            <a href="#" class="btn btn-primary">Comprar</a>
+        </div>
+        </div> 
+    </div>
+
+    <!--teclado-->
+    <div class="col-md" style="background-color:white;">
+        <div class="card text-center" style="width: 18rem;">
+        <div class="card-body">
+            <img src="{% static 'base/img/ampolleta.png' %}" class="card-img-top " alt="...">
+            <h5 class="card-title">Ampolleta Led bluetooth</h5>
+            <p class="card-text" style="text-align:center; color:red; font-size: 20px; font-weight:bold;">$3.990</p>
+            <a href="#" class="btn btn-primary">Comprar</a>
+        </div>
+        </div> 
+    </div>
+
+</div>
+{% endblock %}
+    {% block script %}
+        <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
+      crossorigin="anonymous"
+    ></script>
+    {% endblock %}

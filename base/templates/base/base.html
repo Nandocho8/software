@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+	<head>
+    {% load static %}
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		
+    <!-- Bootstrap CSS -->
+    
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1"
+      crossorigin="anonymous"
+    />
+    {% block style %}
+
+    {% endblock %}
+
+    <title>Importadora Larraín</title>
+    <!-- Si utilizamos componentes de Bootstrap que requieran Javascript agregar estos tres archivos -->
+  </head>
+  <body>
+   
+    <!-- navbar -->
+     <nav class="navbar navbar-expand-md navbar-dark bg-dark ">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="{% url 'index' %}">
+            <img src="{% static '/base/img/logolarrain.png' %}" alt="logo">
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse justify-content-between" id="navbarSupportedContent">
+            <ul class="navbar-nav mb-lg-0 bg-dark">
+              <li class="nav-item">
+                <a class="nav-link " aria-current="page" href="{% url 'index' %}">Inicio </a>
+              </li>
+                <li class="nav-item">
+                {% if user.is_authenticated %}
+                <a class="nav-link" href="{% url 'ofertas' %}">Ofertas</a>
+
+                {% endif %}
+              </li>
+              <li class="nav-item">
+                {% if user.is_authenticated %}
+                <a class="nav-link" href="{% url 'prov' %}">Lo importo por ti</a>
+
+                {% endif %}
+              </li>
+              <li class="nav-item">
+                {% comment %} <a class="nav-link" href="../templates/api.html">Pokedex</a> {% endcomment %}
+              </li>
+              </li>
+                    
+              </ul>
+              <ul  class="navbar-nav mb-lg-0 bg-dark">
+              
+
+              <li class="nav-item">
+                {% if user.is_authenticated %}
+                <a class="nav-link" href="{% url 'datos' %}">{{ user.username }}</a>
+                {% else %}
+                <a class="nav-link" href="{% url 'login' %}">Iniciar sesion</a>
+                {% endif %}
+              </li>
+              <li class="nav-item">
+                {% if user.is_authenticated %}
+                <a class="nav-link" href="{% url 'logout' %}">Cerrar sesion</a>
+    
+                {% else %}
+                <a class="nav-link" href="{% url 'registro' %}">Registrate</a> 
+                {% endif %}
+              </li>
+      
+            </ul>
+            
+          </div>
+        </div>
+      </nav> 
+    {% comment %} TODO aca va lo cambiante {% endcomment %}
+    <div style='position: relative; top: 5px; left: 10px;'>
+
+
+
+    
+    </div>
+    <script>
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
+      crossorigin="anonymous"
+    </script>
+ 
+    {% block script %}
+    {% endblock %}
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+      {% if messages %}
+      {% for m in messages %}
+      <script>
+        Swal.fire({
+          'title' : "IMPORTANTE",
+          'text': "{{ m }}",
+          "icon" : 'info'
+
+        })
+      </script>
+      {% endfor %}
+      {% endif %}
+      {% block content %}
+    {% endblock %}
+
+  </body>
+
+
+</html>
